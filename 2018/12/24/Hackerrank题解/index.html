@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Java,Hackerrank,面向对象,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="这是一篇 hackerrank Java面向对象部分的题目解答笔记。">
+<meta name="keywords" content="Java,Hackerrank,面向对象">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hackerrank题解">
+<meta property="og:url" content="http://yoursite.com/2018/12/24/Hackerrank题解/index.html">
+<meta property="og:site_name" content="Lin Ya&#39;s blog">
+<meta property="og:description" content="这是一篇 hackerrank Java面向对象部分的题目解答笔记。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2018/12/20/5c1ae8a26acbf.jpg">
+<meta property="og:image" content="https://i.loli.net/2018/12/23/5c1f3f30e87f6.jpg">
+<meta property="og:image" content="https://i.loli.net/2018/12/23/5c1f3f3c04e84.jpg">
+<meta property="og:image" content="https://i.loli.net/2018/12/23/5c1f3fed550da.jpg">
+<meta property="og:image" content="https://i.loli.net/2018/12/23/5c1f4027b83b1.jpg">
+<meta property="og:image" content="https://i.loli.net/2018/12/23/5c1f416a1d3fb.jpg">
+<meta property="og:image" content="https://i.loli.net/2018/12/23/5c1f41f9bde25.jpg">
+<meta property="og:updated_time" content="2019-02-24T02:34:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hackerrank题解">
+<meta name="twitter:description" content="这是一篇 hackerrank Java面向对象部分的题目解答笔记。">
+<meta name="twitter:image" content="https://i.loli.net/2018/12/20/5c1ae8a26acbf.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/12/24/Hackerrank题解/">
+
+
+
+
+
+  <title>Hackerrank题解 | Lin Ya's blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lin Ya's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">不可以错过，自己努力的时光</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/24/Hackerrank题解/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lin Ya">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/33563178?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lin Ya's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Hackerrank题解</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-24T11:22:51+08:00">
+                2018-12-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/后端-基础知识/" itemprop="url" rel="index">
+                    <span itemprop="name">后端 - 基础知识</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/24/Hackerrank题解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/24/Hackerrank题解/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这是一篇 hackerrank Java面向对象部分的题目解答笔记。<br><a id="more"></a></p>
+<h4 id="Java-Inheritance-I"><a href="#Java-Inheritance-I" class="headerlink" title="Java Inheritance I"></a>Java Inheritance I</h4><h5 id="题目详情"><a href="#题目详情" class="headerlink" title="题目详情"></a><a href="https://www.hackerrank.com/challenges/java-inheritance-1/problem" target="_blank" rel="noopener">题目详情</a></h5><h5 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h5><p>本题考查子类继承父类以后，如何拓展子类的方法。直接在子类声明里面声明方法即可。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">import</span> java.text.*;</span><br><span class="line"><span class="keyword">import</span> java.math.*;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.*;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">walk</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"I am walking"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bird</span> <span class="keyword">extends</span> <span class="title">Animal</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">fly</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"I am flying"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 直接在这里声明 sing 函数，按照要求完成输出内容即可</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">sing</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"I am singing"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line"></span><br><span class="line">	  Bird bird = <span class="keyword">new</span> Bird();</span><br><span class="line">	  bird.walk();</span><br><span class="line">	  bird.fly();</span><br><span class="line">      bird.sing();</span><br><span class="line">	</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Java-Inheritance-II"><a href="#Java-Inheritance-II" class="headerlink" title="Java Inheritance II"></a>Java Inheritance II</h4><h5 id="题目详情-1"><a href="#题目详情-1" class="headerlink" title="题目详情"></a><a href="https://www.hackerrank.com/challenges/java-inheritance-2/problem" target="_blank" rel="noopener">题目详情</a></h5><h5 id="分析-1"><a href="#分析-1" class="headerlink" title="分析"></a>分析</h5><p>本题继续考查继承的知识点，根据题目给出的 Arithmetic 和 Adder 之间的描述得知两者是父子类的关系，且 add 方法是由父类来实现的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">import</span> java.text.*;</span><br><span class="line"><span class="keyword">import</span> java.math.*;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Write your code here</span></span><br><span class="line"><span class="class"><span class="keyword">class</span>  <span class="title">Arithmetic</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a + b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 子类只需要继承父类即可</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Adder</span> <span class="keyword">extends</span> <span class="title">Arithmetic</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 实例化一个 Adder 对象</span></span><br><span class="line">        Adder a = <span class="keyword">new</span> Adder();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// Print the name of the superclass on a new line</span></span><br><span class="line">		<span class="comment">// 通过一些方法来取得父类的名字</span></span><br><span class="line">        System.out.println(<span class="string">"My superclass is: "</span> + a.getClass().getSuperclass().getName());	</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// Print the result of 3 calls to Adder's `add(int,int)` method as 3 space-separated integers:</span></span><br><span class="line">        System.out.print(a.add(<span class="number">10</span>,<span class="number">32</span>) + <span class="string">" "</span> + a.add(<span class="number">10</span>,<span class="number">3</span>) + <span class="string">" "</span> + a.add(<span class="number">10</span>,<span class="number">10</span>) + <span class="string">"\n"</span>);</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Java-Abstract-Class"><a href="#Java-Abstract-Class" class="headerlink" title="Java Abstract Class"></a>Java Abstract Class</h4><h5 id="题目详情-2"><a href="#题目详情-2" class="headerlink" title="题目详情"></a><a href="https://www.hackerrank.com/challenges/java-abstract-class/problem" target="_blank" rel="noopener">题目详情</a></h5><h5 id="分析-2"><a href="#分析-2" class="headerlink" title="分析"></a>分析</h5><p>题目给出了一个 Book 的抽象类，内含一个抽象方法 setTitle 和一个放回 String 类型的 getTitle 方法。根据调用方法可以得知真正调用的是 MyBook 类的实例化对象 new_novel 的 setTitle方法来设置 title，通过 getTitle 方法来获取成员变量 title。那么只需要让 MyBook 类继承 Book 类，然后具体实现 setTitle 方法即可。需要注意的是，在子类当中是通过关键字<code>super</code>来访问父类。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Book</span></span>&#123;</span><br><span class="line">	String title;</span><br><span class="line">	<span class="function"><span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">setTitle</span><span class="params">(String s)</span></span>;</span><br><span class="line">	<span class="function">String <span class="title">getTitle</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> title;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Write MyBook class here</span></span><br><span class="line"><span class="comment">// 继承抽象类，然后实现 setTitle 的方法</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyBook</span> <span class="keyword">extends</span> <span class="title">Book</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setTitle</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.title = s; 		<span class="comment">// 通过super来访问父类</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span></span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">		<span class="comment">//Book new_novel=new Book(); This line prHMain.java:25: error: Book is abstract; cannot be instantiated</span></span><br><span class="line">		Scanner sc=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		String title=sc.nextLine();</span><br><span class="line">		MyBook new_novel=<span class="keyword">new</span> MyBook();</span><br><span class="line">		new_novel.setTitle(title);</span><br><span class="line">		System.out.println(<span class="string">"The title is: "</span>+new_novel.getTitle());</span><br><span class="line">      	sc.close();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="Java-Interface"><a href="#Java-Interface" class="headerlink" title="Java Interface"></a>Java Interface</h4><h5 id="题目详情-3"><a href="#题目详情-3" class="headerlink" title="题目详情"></a><a href="https://www.hackerrank.com/challenges/java-interface/problem" target="_blank" rel="noopener">题目详情</a></h5><h5 id="分析-3"><a href="#分析-3" class="headerlink" title="分析"></a>分析</h5><p>题目要求 MyCalculator 在继承 AdvancedArithmetic 接口的前提下，通过实现 divisor_sum 函数来满足既定的需求（输入一个整数 n ，返回能被 n 整除的整数之和）。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">AdvancedArithmetic</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">int</span> <span class="title">divisor_sum</span><span class="params">(<span class="keyword">int</span> n)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Write your code here</span></span><br><span class="line"><span class="comment">// 继承 AdvancedArithmetic 接口</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyCalculator</span> <span class="keyword">implements</span> <span class="title">AdvancedArithmetic</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">divisor_sum</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (n != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (n % i == <span class="number">0</span>) &#123;</span><br><span class="line">                    result += i;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">        MyCalculator my_calculator = <span class="keyword">new</span> MyCalculator();</span><br><span class="line">        System.out.print(<span class="string">"I implemented: "</span>);</span><br><span class="line">        ImplementedInterfaceNames(my_calculator);</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">        System.out.print(my_calculator.divisor_sum(n) + <span class="string">"\n"</span>);</span><br><span class="line">      	sc.close();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     *  ImplementedInterfaceNames method takes an object and prints the name of the interfaces it implemented</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">	 <span class="comment">// 这个方法要求传入参数类型是对象</span></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ImplementedInterfaceNames</span><span class="params">(Object o)</span></span>&#123;</span><br><span class="line">        Class[] theInterfaces = o.getClass().getInterfaces();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; theInterfaces.length; i++)&#123;</span><br><span class="line">            String interfaceName = theInterfaces[i].getName();</span><br><span class="line">            System.out.println(interfaceName);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Java-Method-Overriding"><a href="#Java-Method-Overriding" class="headerlink" title="Java Method Overriding"></a>Java Method Overriding</h4><h5 id="题目详情-4"><a href="#题目详情-4" class="headerlink" title="题目详情"></a><a href="https://www.hackerrank.com/challenges/java-method-overriding/problem" target="_blank" rel="noopener">题目详情</a></h5><h5 id="分析-4"><a href="#分析-4" class="headerlink" title="分析"></a>分析</h5><p>根据例子重写父类的同名方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sports</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function">String <span class="title">getName</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"Generic Sports"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">getNumberOfTeamMembers</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println( <span class="string">"Each team has n players in "</span> + getName() );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Soccer</span> <span class="keyword">extends</span> <span class="title">Sports</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function">String <span class="title">getName</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"Soccer Class"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">getNumberOfTeamMembers</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Each team has 11 players in "</span> + getName());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</span><br><span class="line">	</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">        Sports c1 = <span class="keyword">new</span> Sports();</span><br><span class="line">        Soccer c2 = <span class="keyword">new</span> Soccer();</span><br><span class="line">        System.out.println(c1.getName());</span><br><span class="line">        c1.getNumberOfTeamMembers();</span><br><span class="line">        System.out.println(c2.getName());</span><br><span class="line">        c2.getNumberOfTeamMembers();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Java-Method-Overriding-2-Super-Keyword"><a href="#Java-Method-Overriding-2-Super-Keyword" class="headerlink" title="Java Method Overriding 2 (Super Keyword)"></a>Java Method Overriding 2 (Super Keyword)</h4><h5 id="题目详情-5"><a href="#题目详情-5" class="headerlink" title="题目详情"></a><a href="https://www.hackerrank.com/challenges/java-method-overriding-2-super-keyword/problem" target="_blank" rel="noopener">题目详情</a></h5><h5 id="分析-5"><a href="#分析-5" class="headerlink" title="分析"></a>分析</h5><p>掌握通过关键字 <code>super</code> 来访问父类，包括调用父类的方法。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BiCycle</span></span>&#123;</span><br><span class="line">	<span class="function">String <span class="title">define_me</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">"a vehicle with pedals."</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MotorCycle</span> <span class="keyword">extends</span> <span class="title">BiCycle</span></span>&#123;</span><br><span class="line">	<span class="function">String <span class="title">define_me</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">"a cycle with an engine."</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	MotorCycle()&#123;</span><br><span class="line">		System.out.println(<span class="string">"Hello I am a motorcycle, I am "</span>+ define_me());</span><br><span class="line"></span><br><span class="line">		String temp=<span class="keyword">super</span>.define_me(); <span class="comment">//Fix this line</span></span><br><span class="line"></span><br><span class="line">		System.out.println(<span class="string">"My ancestor is a cycle who is "</span>+ temp );</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">		MotorCycle M=<span class="keyword">new</span> MotorCycle();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="Java-Instanceof-keyword"><a href="#Java-Instanceof-keyword" class="headerlink" title="Java Instanceof keyword"></a>Java Instanceof keyword</h4><h5 id="题目详情-6"><a href="#题目详情-6" class="headerlink" title="题目详情"></a><a href="https://www.hackerrank.com/challenges/java-instanceof-keyword/problem" target="_blank" rel="noopener">题目详情</a></h5><h5 id="分析-6"><a href="#分析-6" class="headerlink" title="分析"></a>分析</h5><p>考查使用<code>instanceof</code>关键字来确定对象是否是某一个类的实例，返回的是一个布尔类型的值。<br>只要判断当前对象是三个类的哪一个，然后给计数+1即可。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Rockstar</span></span>&#123;   &#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Hacker</span></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InstanceOFTutorial</span></span>&#123;</span><br><span class="line">	</span><br><span class="line">   <span class="function"><span class="keyword">static</span> String <span class="title">count</span><span class="params">(ArrayList mylist)</span></span>&#123;</span><br><span class="line">      <span class="keyword">int</span> a = <span class="number">0</span>,b = <span class="number">0</span>,c = <span class="number">0</span>;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; mylist.size(); i++)&#123;</span><br><span class="line">         Object element=mylist.get(i);</span><br><span class="line">         <span class="keyword">if</span>(element <span class="keyword">instanceof</span> Student)</span><br><span class="line">            a++;</span><br><span class="line">         <span class="keyword">if</span>(element <span class="keyword">instanceof</span> Rockstar)</span><br><span class="line">            b++;</span><br><span class="line">         <span class="keyword">if</span>(element <span class="keyword">instanceof</span> Hacker)</span><br><span class="line">            c++;</span><br><span class="line">      &#125;</span><br><span class="line">      String ret = Integer.toString(a)+<span class="string">" "</span>+ Integer.toString(b)+<span class="string">" "</span>+ Integer.toString(c);</span><br><span class="line">      <span class="keyword">return</span> ret;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">      ArrayList mylist = <span class="keyword">new</span> ArrayList();</span><br><span class="line">      Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">      <span class="keyword">int</span> t = sc.nextInt();</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;t; i++)&#123;</span><br><span class="line">         String s=sc.next();</span><br><span class="line">         <span class="keyword">if</span>(s.equals(<span class="string">"Student"</span>))mylist.add(<span class="keyword">new</span> Student());</span><br><span class="line">         <span class="keyword">if</span>(s.equals(<span class="string">"Rockstar"</span>))mylist.add(<span class="keyword">new</span> Rockstar());</span><br><span class="line">         <span class="keyword">if</span>(s.equals(<span class="string">"Hacker"</span>))mylist.add(<span class="keyword">new</span> Hacker());</span><br><span class="line">      &#125;</span><br><span class="line">      System.out.println(count(mylist));</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="Java-Iterator"><a href="#Java-Iterator" class="headerlink" title="Java Iterator"></a>Java Iterator</h4><h5 id="题目详情-7"><a href="#题目详情-7" class="headerlink" title="题目详情"></a><a href="https://www.hackerrank.com/challenges/java-iterator/problem" target="_blank" rel="noopener">题目详情</a></h5><h5 id="分析-7"><a href="#分析-7" class="headerlink" title="分析"></a>分析</h5><p>本题考查的是对于 Java 迭代器 的基本认识。根据题目提示，需要找出标记为<code>###</code>字符串后面的所有字符串，而<code>###</code>之前的所有输入都不是<code>String</code>，那么配合上一题的 <code>instanceof</code> 找出 <code>String</code>的第一个实例（“###”）即可。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span></span>&#123;</span><br><span class="line">	</span><br><span class="line">   <span class="function"><span class="keyword">static</span> Iterator <span class="title">func</span><span class="params">(ArrayList mylist)</span></span>&#123;</span><br><span class="line">      Iterator it=mylist.iterator();</span><br><span class="line">      <span class="keyword">while</span>(it.hasNext())&#123;</span><br><span class="line">         Object element = it.next();</span><br><span class="line">         <span class="keyword">if</span>(element <span class="keyword">instanceof</span> String)<span class="comment">//Hints: use instanceof operator</span></span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">      <span class="keyword">return</span> it;</span><br><span class="line">      </span><br><span class="line">   &#125;</span><br><span class="line">   <span class="meta">@SuppressWarnings</span>(&#123; <span class="string">"unchecked"</span> &#125;)</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">      ArrayList mylist = <span class="keyword">new</span> ArrayList();</span><br><span class="line">      Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">      <span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">      <span class="keyword">int</span> m = sc.nextInt();</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">         mylist.add(sc.nextInt());</span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">      mylist.add(<span class="string">"###"</span>);</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">         mylist.add(sc.next());</span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">      Iterator it=func(mylist);</span><br><span class="line">      <span class="keyword">while</span>(it.hasNext())&#123;</span><br><span class="line">         Object element = it.next();</span><br><span class="line">         System.out.println((String)element);</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Java数据结构"><a href="#Java数据结构" class="headerlink" title="Java数据结构"></a>Java数据结构</h3><h4 id="Maximum-Element"><a href="#Maximum-Element" class="headerlink" title="Maximum Element"></a>Maximum Element</h4><h5 id="题目详情-8"><a href="#题目详情-8" class="headerlink" title="题目详情"></a><a href="https://www.hackerrank.com/challenges/maximum-element/problem" target="_blank" rel="noopener">题目详情</a></h5><h5 id="分析-8"><a href="#分析-8" class="headerlink" title="分析"></a>分析</h5><p>题目其实可以转转化分析为，如何快速查找栈中的最大值（最小值也同理）。我们通过使用双栈即可，一个记录数字的顺序，另一个则用于记录最大值（当遇到的新的输入值大于栈中顶部的数，则把新的数字放入栈中，以保证栈顶的数是最大值）。</p>
+<p>当遇到删除指令，则需要加一层判断，看此数字是否在记录最大值的栈的顶部，如果是的话就要一并进行移除。</p>
+<p>需要打印最大值的时候则使用 peek 命令来获取最大值栈的顶部数值。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">/* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */</span></span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        Stack&lt;Integer&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        Stack&lt;Integer&gt; top = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        <span class="keyword">int</span> step = sc.nextInt();</span><br><span class="line">        <span class="keyword">while</span>(sc.hasNext()) &#123;</span><br><span class="line">            <span class="keyword">int</span> type = sc.nextInt();</span><br><span class="line">            <span class="keyword">switch</span>(type) &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                    <span class="keyword">int</span> t = sc.nextInt();</span><br><span class="line">                    stack.push(t);</span><br><span class="line">                    <span class="keyword">if</span> (top.empty() || t &gt;= top.peek())&#123;</span><br><span class="line">                        top.push(t);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                    <span class="keyword">if</span> (!stack.empty()) &#123;</span><br><span class="line">                        <span class="keyword">int</span> j = stack.pop();</span><br><span class="line">                        <span class="keyword">if</span> (j == top.peek()) &#123;</span><br><span class="line">                            top.pop();</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">                    System.out.println(top.peek());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        sc.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Balanced-Brackets（括号平衡）"><a href="#Balanced-Brackets（括号平衡）" class="headerlink" title="Balanced Brackets（括号平衡）"></a>Balanced Brackets（括号平衡）</h4><h5 id="题目详情-9"><a href="#题目详情-9" class="headerlink" title="题目详情"></a><a href="https://www.hackerrank.com/challenges/balanced-brackets/problem" target="_blank" rel="noopener">题目详情</a></h5><h5 id="分析-9"><a href="#分析-9" class="headerlink" title="分析"></a>分析</h5><p>这题也是考查对栈的应用。</p>
+<p>首先要判断目标字符串的长度，如果小于2的话就可以直接返回<code>false</code>了（有的题目要求如果字符串为空的话，结果为<code>true</code>，这个也应该在一开始进行判断，就可以节省代码执行时间）。</p>
+<p>遍历字符串的时候，遇到左括号就可以直接压入栈中；<br>当遇到右括号的时候，先检查栈是否为空（为空的话就直接返回 <code>false</code> ，因为这时候没有左括号可供消除），必须是会与栈顶的左括号想匹配的（如果不匹配的话就可以返回 <code>false</code> 了），匹配的话就对执行栈执行 pop 操作。</p>
+<p>遍历结束以后，如果栈的长度为空，说明已经消除了全部的左括号，否则就是还有左括号没有被平衡。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.math.*;</span><br><span class="line"><span class="keyword">import</span> java.security.*;</span><br><span class="line"><span class="keyword">import</span> java.text.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.*;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// Complete the isBalanced function below.</span></span><br><span class="line">	<span class="function"><span class="keyword">static</span> String <span class="title">isBalanced</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">		Stack&lt;Character&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">		<span class="keyword">if</span> (s.length() &lt; <span class="number">2</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="string">"NO"</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i&lt; s.length(); i++) &#123;</span><br><span class="line">			<span class="keyword">char</span> t = s.charAt(i);</span><br><span class="line">			<span class="keyword">if</span> ((t == <span class="string">'('</span>) || (t == <span class="string">'['</span>) || (t == <span class="string">'&#123;'</span>)) &#123;</span><br><span class="line">				stack.push(t);</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="keyword">if</span> (!stack.empty()) &#123;</span><br><span class="line">				<span class="comment">// 这里的判断条件可以用一个 if 语句完成，这里分开写只是为了容易理解。</span></span><br><span class="line">					<span class="keyword">if</span> (stack.peek() == <span class="string">'('</span> &amp;&amp; t == <span class="string">')'</span>) &#123;</span><br><span class="line">						stack.pop();</span><br><span class="line">					&#125;<span class="keyword">else</span> <span class="keyword">if</span> (stack.peek() == <span class="string">'['</span> &amp;&amp; t == <span class="string">']'</span>) &#123;</span><br><span class="line">						stack.pop();</span><br><span class="line">					&#125;<span class="keyword">else</span> <span class="keyword">if</span> (stack.peek() == <span class="string">'&#123;'</span> &amp;&amp; t == <span class="string">'&#125;'</span>) &#123;</span><br><span class="line">						stack.pop();</span><br><span class="line">					&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">						<span class="keyword">return</span> <span class="string">"NO"</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">					<span class="keyword">return</span> <span class="string">"NO"</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> stack.size() == <span class="number">0</span> ? <span class="string">"YES"</span> : <span class="string">"NO"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Equal-Stacks"><a href="#Equal-Stacks" class="headerlink" title="Equal Stacks"></a>Equal Stacks</h4><h5 id="题目详情-10"><a href="#题目详情-10" class="headerlink" title="题目详情"></a><a href="https://www.hackerrank.com/challenges/equal-stacks/problem" target="_blank" rel="noopener">题目详情</a></h5><h4 id="分析-10"><a href="#分析-10" class="headerlink" title="分析"></a>分析</h4><p>贪心解决。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">equalStacks</span><span class="params">(<span class="keyword">int</span>[] h1, <span class="keyword">int</span>[] h2, <span class="keyword">int</span>[] h3)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 用三个栈按顺序存储输入的数组</span></span><br><span class="line">        Stack&lt;Integer&gt; s1 = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">        Stack&lt;Integer&gt; s2 = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">        Stack&lt;Integer&gt; s3 = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">		<span class="comment">// 三个用于存储栈内数字总和的变量</span></span><br><span class="line">        <span class="keyword">int</span> sum1 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> sum2 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> sum3 = <span class="number">0</span>;</span><br><span class="line">		<span class="comment">// 分别填充栈和计算总和</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = h1.length-<span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            sum1 += h1[i];</span><br><span class="line">            s1.push(h1[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = h2.length-<span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            sum2 += h2[i];</span><br><span class="line">            s2.push(h2[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = h3.length-<span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            sum3 += h3[i];</span><br><span class="line">            s3.push(h3[i]);</span><br><span class="line">        &#125;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 其实这里的判断条件可以为 sum1 == sum2 &amp;&amp; sum1 == sum3</span></span><br><span class="line">		<span class="comment">// 但考虑到如果出现为0（也就是无法匹配里面的逻辑条件的话），就不需要继续 while 循环了，所以也可以用true</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 处理方法就是，找到总数最大的栈，然后取出顶部数字，同时所对应的 sum* 变量也跟着自减</span></span><br><span class="line">		<span class="comment">// 贪心处理就可以解决</span></span><br><span class="line">        <span class="keyword">while</span>(<span class="keyword">true</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span> (sum1 &gt; sum2 || sum1 &gt; sum3) &#123;</span><br><span class="line">                sum1 -= s1.pop();</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span> (sum2 &gt; sum3 || sum2 &gt; sum1) &#123;</span><br><span class="line">                sum2 -= s2.pop();</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span> (sum3 &gt; sum1 || sum3 &gt; sum2) &#123;</span><br><span class="line">                sum3 -= s3.pop();</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sum1;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>方法二<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">equalStacks</span><span class="params">(<span class="keyword">int</span>[] h1, <span class="keyword">int</span>[] h2, <span class="keyword">int</span>[] h3)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 先用sum方法来计算数组总和</span></span><br><span class="line">        <span class="keyword">int</span> sum1 = sum(h1);</span><br><span class="line">        <span class="keyword">int</span> sum2 = sum(h2);</span><br><span class="line">        <span class="keyword">int</span> sum3 = sum(h3);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 同来记录操作下标</span></span><br><span class="line">        <span class="keyword">int</span> i1 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> i2 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> i3 = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 这里改为用下标来当做上个方法中的栈的顶部指针</span></span><br><span class="line">		<span class="comment">// 这样的方法还是比较巧妙，不直接使用栈，但利用了栈处理的思想</span></span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (sum1 &gt; sum2 || sum1 &gt; sum3) &#123;</span><br><span class="line">                sum1 -= h1[i1++];</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sum2 &gt; sum1 || sum2 &gt; sum3) &#123;</span><br><span class="line">                sum2 -= h2[i2++];</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sum3 &gt; sum1 || sum3 &gt; sum2) &#123;</span><br><span class="line">                sum3 -= h3[i3++];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> sum1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 用来计算数组中的所有元素的总和</span></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : arr) &#123;</span><br><span class="line">            result += i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="Game-of-Two-Stacks"><a href="#Game-of-Two-Stacks" class="headerlink" title="Game of Two Stacks"></a>Game of Two Stacks</h4><h5 id="题目详情-11"><a href="#题目详情-11" class="headerlink" title="题目详情"></a><a href="https://www.hackerrank.com/challenges/game-of-two-stacks/problem" target="_blank" rel="noopener">题目详情</a></h5><h5 id="分析-11"><a href="#分析-11" class="headerlink" title="分析"></a>分析</h5><p>一开始使用的贪心最小策略，但是提交的时候有部分测试不通过。后来也想明白了原因，就是假如你专注于比较每次栈顶数字的大小，会错过后面的小数字的，就是说不应该使用贪心最小策略。</p>
+<p>这题还有点像动态规划的样子，但其实要留意一点：每次从a栈或者b栈中取数字，都必须要从顶部开始。</p>
+<p>这样的话我们可以先假设全部从b栈中取数字，看能取到什么程度。然后再把b栈已经取得的最后一位数字退回去，改用a栈的来代替。这样就可以尝试两边都取。最优解的结果只有一个，虽然有可能实现的路径有多个，正因为如此选择从a栈开始或者b栈开始都没有关系。</p>
+<p>得好好琢磨一下才行。</p>
+<p><img src="https://i.loli.net/2018/12/20/5c1ae8a26acbf.jpg" alt="图示"><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.math.*;</span><br><span class="line"><span class="keyword">import</span> java.text.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * Complete the twoStacks function below.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">twoStacks</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span>[] a, <span class="keyword">int</span>[] b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> ib = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 可以不用栈，但应该有栈的特性（先进后出）</span></span><br><span class="line">        <span class="comment">// 所以应该有下标来记录栈顶的位置，同时也能记录操作次数</span></span><br><span class="line">        <span class="comment">// 遍历数组b，在符合条件内将可以获取的数都取出来</span></span><br><span class="line">        <span class="comment">// 用ib记录</span></span><br><span class="line">        <span class="keyword">while</span>(ib &lt; b.length &amp;&amp; sum + b[ib] &lt;= x) &#123;</span><br><span class="line">            sum += b[ib];</span><br><span class="line">            ib += <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 经过上面的操作以后，先假设全部针对b数组的操作的次数是最大值</span></span><br><span class="line">        <span class="keyword">int</span> max = ib;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 然后遍历数组a，先把b的顶部数取出来，把a的头部放进去，如果小于x，则继续。如果大于x，就中断</span></span><br><span class="line">        <span class="comment">// 每次对比a的遍历次数 + b 的遍历次数</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> ia = <span class="number">1</span>; ia &lt;= a.length; ia++) &#123;</span><br><span class="line">            sum += a[ia-<span class="number">1</span>];</span><br><span class="line">            <span class="comment">// 这里比较关键，首先sum已经添加了a数组的最后一项</span></span><br><span class="line">            <span class="comment">// 如果sum 比x大而且也仍从B中获取数字，就应该试一下从sum中减去b的顶部</span></span><br><span class="line">            <span class="keyword">while</span> (sum &gt; x &amp;&amp; ib &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="comment">// 因为在上面的while循环里面的判断跳出条件是</span></span><br><span class="line">                <span class="comment">// ib &gt; b.length;</span></span><br><span class="line">                <span class="comment">// 所以这里要对ib进行自减，才是b数组中已经取得的最后一位有效的数字（是已经拿走的数字队列中的最后一位，而不是数组的最后一位，类似于栈的顶部指针索引一样）</span></span><br><span class="line">                ib -=<span class="number">1</span>;</span><br><span class="line">                sum -= b[ib];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 这里和上面并不冲突</span></span><br><span class="line">            <span class="keyword">if</span> (sum &gt; x) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            max = Math.max(max, ia + ib);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="Largest-Rectangle（最大的矩形）"><a href="#Largest-Rectangle（最大的矩形）" class="headerlink" title="Largest Rectangle（最大的矩形）"></a>Largest Rectangle（最大的矩形）</h4><h5 id="题目详情-12"><a href="#题目详情-12" class="headerlink" title="题目详情"></a><a href="https://www.hackerrank.com/challenges/largest-rectangle/problem" target="_blank" rel="noopener">题目详情</a></h5><h5 id="分析-12"><a href="#分析-12" class="headerlink" title="分析"></a>分析</h5><p>先给高度数组尾部添加一个0（用于结束循环）。</p>
+<p>遍历高度数组，当 i 所指向的高度的矩形比前一个矩形要高，就把其索引压入栈中（或者当栈是空的时候）。<br>当遇到一个矩形的的高度小于前一个矩形高度的时候，先把栈的顶部元素排出并记录为top，就先计算top的矩形的面积，上一个矩形面积（高 X 宽，此时的宽是1，由遍历数组的 i 来计算的话，应该是 i - 当前栈顶的索引的矩形高度 - 1），然后跟存储的最大矩形面积相比，替换。此后步骤重复执行，每次执行结束以后，i–。</p>
+<p><img src="https://i.loli.net/2018/12/23/5c1f3f30e87f6.jpg" alt="1"><br> 刚开始栈中为空，压入下标0；然后当i=1时，2&lt;=1不成立，下标出栈，栈变为空，计算此时面积res=2；</p>
+<p><img src="https://i.loli.net/2018/12/23/5c1f3f3c04e84.jpg" alt="2"><br>依次将高度 1,5,6 所对应的索引 1,2,3 压入栈，直到i=4, 6 &gt; 2，下标3要出栈，此时计算的面积就是6（单一个矩形的面积），宽是如何确定的呢？<code>i (4) - stack.peek() (2) - 1 = 4 - 2 - 1</code></p>
+<p><img src="https://i.loli.net/2018/12/23/5c1f3fed550da.jpg" alt="3"><br>栈顶元素为2，其对应的高度为5&gt;2（此时，还要和下标i=4的高度比较），所以，栈顶元素2出栈，计算面积为res=10；</p>
+<p><img src="https://i.loli.net/2018/12/23/5c1f4027b83b1.jpg" alt="4"><br>栈顶元素是2，对应的高度 1 &lt; 2，就把 i= 4 入栈，直到了最后一个高度为0的索引。当遍历到 i = 6，此高度为0，所有的元素都比这个大，便向前进行计算面积。 栈顶为 5，就计算此面积为4。</p>
+<p><img src="https://i.loli.net/2018/12/23/5c1f416a1d3fb.jpg" alt="5"><br>栈顶元素是4，对应的高度是2 &gt; 0，把栈顶4 出栈，计算绿色部分的面积（最大的绿色矩形,从 2 =&gt; 5），得出8</p>
+<p><img src="https://i.loli.net/2018/12/23/5c1f41f9bde25.jpg" alt="6"><br>栈顶元素是1，对应的高度是1 &gt; 0，把栈顶1 出栈（此时为空栈了），计算面积方式就改为： 高度 x i，得出绿色方框部分的面积。</p>
+<p>直到最后，最大面积是10，所以返回10。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LargestRectangle</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span>[] h)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (h.length &lt; <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Stack&lt;Integer&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        <span class="keyword">int</span> maxArea = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span>[] arr = Arrays.copyOf(h, h.length + <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (stack.empty() || arr[i] &gt;= arr[stack.peek()]) &#123;</span><br><span class="line">                stack.push(i);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">int</span> top = stack.pop();</span><br><span class="line">                <span class="keyword">int</span> area = arr[top] * (stack.empty() ? i : i - stack.peek() - <span class="number">1</span>);</span><br><span class="line">                maxArea = Math.max(area, maxArea);</span><br><span class="line">                i--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> maxArea;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span> k = solve(a);</span><br><span class="line">        System.out.println(k);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>在LeetCode中看到有一种方法是这样的：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span>[] heights)</span> </span>&#123;</span><br><span class="line"><span class="comment">//  1、如果已知height数组是升序的，应该怎么做？</span></span><br><span class="line"><span class="comment">//	比如1,2,5,7,8</span></span><br><span class="line"><span class="comment">//	那么就是(1*5) vs. (2*4) vs. (5*3) vs. (7*2) vs. (8*1)</span></span><br><span class="line"><span class="comment">//	也就是max(height[i]*(size-i))</span></span><br><span class="line"><span class="comment">//	2、使用栈的目的就是构造这样的升序序列，按照以上方法求解。</span></span><br><span class="line"><span class="comment">//	但是height本身不一定是升序的，应该怎样构建栈？</span></span><br><span class="line"><span class="comment">//	比如2,1,5,6,2,3</span></span><br><span class="line"><span class="comment">//	（1）2进栈。s=&#123;2&#125;, result = 0</span></span><br><span class="line"><span class="comment">//	（2）1比2小，不满足升序条件，因此将2弹出，并记录当前结果为2*1=2。</span></span><br><span class="line"><span class="comment">//	将2替换为1重新进栈。s=&#123;1,1&#125;, result = 2</span></span><br><span class="line"><span class="comment">//	（3）5比1大，满足升序条件，进栈。s=&#123;1,1,5&#125;,result = 2</span></span><br><span class="line"><span class="comment">//	（4）6比5大，满足升序条件，进栈。s=&#123;1,1,5,6&#125;,result = 2</span></span><br><span class="line"><span class="comment">//	（5）2比6小，不满足升序条件，因此将6弹出，并记录当前结果为6*1=6。s=&#123;1,1,5&#125;,result = 6</span></span><br><span class="line"><span class="comment">//	2比5小，不满足升序条件，因此将5弹出，并记录当前结果为5*2=10（因为已经弹出的5,6是升序的）。s=&#123;1,1&#125;,result = 10</span></span><br><span class="line"><span class="comment">//	2比1大，将弹出的5,6替换为2重新进栈。s=&#123;1,1,2,2,2&#125;,result = 10</span></span><br><span class="line"><span class="comment">//	（6）3比2大，满足升序条件，进栈。s=&#123;1,1,2,2,2,3&#125;,result = 10</span></span><br><span class="line"><span class="comment">//	栈构建完成，满足升序条件，因此按照升序处理办法得到上述的max(height[i]*(size-i))=max&#123;3*1, 2*2, 2*3, 2*4, 1*5, 1*6&#125;=8&lt;10</span></span><br><span class="line"><span class="comment">//	综上所述，result=10</span></span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        Stack&lt;Integer&gt; stack = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; heights.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (stack.size() == <span class="number">0</span> || stack.peek() &lt;= heights[i]) &#123;</span><br><span class="line">                stack.push(heights[i]);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">int</span> counter = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">while</span> (stack.size() != <span class="number">0</span> &amp;&amp; stack.peek() &gt; heights[i]) &#123;</span><br><span class="line">                    counter++;</span><br><span class="line">                    res = Math.max(res, stack.peek() * counter);</span><br><span class="line">                    stack.pop();</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">while</span> (counter != <span class="number">0</span>) &#123;</span><br><span class="line">                    stack.push(heights[i]);</span><br><span class="line">                    counter--;</span><br><span class="line">                &#125;</span><br><span class="line">                stack.push(heights[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (!stack.isEmpty()) &#123;</span><br><span class="line">            res = Math.max(res, stack.peek() * count);</span><br><span class="line">            stack.pop();</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/yutianzuijin/article/details/52072427" target="_blank" rel="noopener">参考博客1</a><br><a href="https://chuansongme.com/n/390896436960" target="_blank" rel="noopener">很神奇的解法！怎么求柱状图中的最大矩形？</a><br><a href="http://www.cnblogs.com/lichen782/p/leetcode_Largest_Rectangle_in_Histogram.html" target="_blank" rel="noopener">参考博客2</a></p>
+<h4 id="Simple-Text-Editor"><a href="#Simple-Text-Editor" class="headerlink" title="Simple Text Editor"></a>Simple Text Editor</h4><h4 id="题目详情-13"><a href="#题目详情-13" class="headerlink" title="题目详情"></a><a href="https://www.hackerrank.com/challenges/simple-text-editor/problem" target="_blank" rel="noopener">题目详情</a></h4><h4 id="分析-13"><a href="#分析-13" class="headerlink" title="分析"></a>分析</h4><p>利用栈存储每一次操作之后的字符串结果。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        Stack&lt;String&gt; st = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        String result = <span class="string">""</span>;</span><br><span class="line">        st.push(result);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> l = sc.nextInt();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; l; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> op = sc.nextInt();</span><br><span class="line">            <span class="keyword">switch</span> (op) &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                    result = st.peek() + sc.next();</span><br><span class="line">                    st.push(result);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                    <span class="keyword">if</span> (!st.empty()) &#123;</span><br><span class="line">                        <span class="keyword">int</span> end = sc.nextInt();</span><br><span class="line">                        result = result.substring(<span class="number">0</span>, result.length() - end);</span><br><span class="line">                        st.push(result);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">                    <span class="keyword">if</span> (!st.empty()) &#123;</span><br><span class="line">                        result = st.peek();</span><br><span class="line">                        <span class="keyword">char</span> x = result.charAt(sc.nextInt() - <span class="number">1</span>);</span><br><span class="line">                        System.out.println(x);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">                    <span class="keyword">if</span> (!st.empty()) &#123;</span><br><span class="line">                        st.pop();</span><br><span class="line">                        result = st.peek();</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        sc.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Queue-using-Two-Stacks"><a href="#Queue-using-Two-Stacks" class="headerlink" title="Queue using Two Stacks"></a>Queue using Two Stacks</h4><h5 id="题目详情-14"><a href="#题目详情-14" class="headerlink" title="题目详情"></a><a href="https://www.hackerrank.com/challenges/queue-using-two-stacks/problem" target="_blank" rel="noopener">题目详情</a></h5><h5 id="分析-14"><a href="#分析-14" class="headerlink" title="分析"></a>分析</h5><p>使用两个栈（s1 和 s2）来实现队列的特性（先进先出）。<br>一开始想这样：一个栈用于存储，另一个栈待命。当遇到了要 <code>pop</code> 或者 <code>peek</code> 的时候，就把 s1 所有元素 <code>pop</code> 到 s2，然后再进行操作，完成以后再全部转回去。</p>
+<p>不出意外，超时了。。。</p>
+<p>问题就出在了其实没有必要每次都进行栈内元素的转移，非常耗费时间的。换个角度，用一个类来模拟queue，实现三个方法（<code>push</code>、<code>pop</code>、<code>peek</code>）。当需要<code>push</code>进入队列，就正常 push 到 s1。<code>pop</code>与<code>peek</code>操作的对象其实是 s2，因为 s2 的存在是给我们存储的元素倒序的，假如s2 栈为空，就转移 s1 的元素到 s2 就好了。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">/* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */</span></span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> l = sc.nextInt();</span><br><span class="line">        QueueWithTwoStacks q = <span class="keyword">new</span> QueueWithTwoStacks();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; l; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> op = sc.nextInt();</span><br><span class="line">            <span class="keyword">switch</span> (op) &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                    q.push(sc.nextInt());</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                    q.pop();</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">                    System.out.println(q.peek());</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">default</span>:</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        sc.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">QueueWithTwoStacks</span> </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> Stack&lt;Integer&gt; s1;</span><br><span class="line">        <span class="keyword">private</span> Stack&lt;Integer&gt; s2;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">QueueWithTwoStacks</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">super</span>();</span><br><span class="line">            <span class="keyword">this</span>.s1 = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">            <span class="keyword">this</span>.s2 = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> t)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (s2.empty()) &#123;</span><br><span class="line">                <span class="keyword">while</span>(!s1.empty()) &#123;</span><br><span class="line">                    s2.push(s1.pop());</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            s1.push(t);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (s2.empty()) &#123;</span><br><span class="line">                <span class="keyword">while</span> (!s1.empty()) &#123;</span><br><span class="line">                    s2.push(s1.pop());</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> s2.pop();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">peek</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (s2.empty()) &#123;</span><br><span class="line">                <span class="keyword">while</span> (!s1.empty()) &#123;</span><br><span class="line">                    s2.push(s1.pop());</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> s2.peek();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/Hackerrank/" rel="tag"># Hackerrank</a>
+          
+            <a href="/tags/面向对象/" rel="tag"># 面向对象</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/30/基于Git分支的工作流程/" rel="next" title="基于Git分支的工作流程">
+                <i class="fa fa-chevron-left"></i> 基于Git分支的工作流程
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/02/Java简单爬虫/" rel="prev" title="Java简单爬虫">
+                Java简单爬虫 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://avatars1.githubusercontent.com/u/33563178?s=460&v=4" alt="Lin Ya">
+            
+              <p class="site-author-name" itemprop="name">Lin Ya</p>
+              <p class="site-description motion-element" itemprop="description">长跑中的程序猿</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-Inheritance-I"><span class="nav-number">1.</span> <span class="nav-text">Java Inheritance I</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目详情"><span class="nav-number">1.1.</span> <span class="nav-text">题目详情</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分析"><span class="nav-number">1.2.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-Inheritance-II"><span class="nav-number">2.</span> <span class="nav-text">Java Inheritance II</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目详情-1"><span class="nav-number">2.1.</span> <span class="nav-text">题目详情</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分析-1"><span class="nav-number">2.2.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-Abstract-Class"><span class="nav-number">3.</span> <span class="nav-text">Java Abstract Class</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目详情-2"><span class="nav-number">3.1.</span> <span class="nav-text">题目详情</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分析-2"><span class="nav-number">3.2.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-Interface"><span class="nav-number">4.</span> <span class="nav-text">Java Interface</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目详情-3"><span class="nav-number">4.1.</span> <span class="nav-text">题目详情</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分析-3"><span class="nav-number">4.2.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-Method-Overriding"><span class="nav-number">5.</span> <span class="nav-text">Java Method Overriding</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目详情-4"><span class="nav-number">5.1.</span> <span class="nav-text">题目详情</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分析-4"><span class="nav-number">5.2.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-Method-Overriding-2-Super-Keyword"><span class="nav-number">6.</span> <span class="nav-text">Java Method Overriding 2 (Super Keyword)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目详情-5"><span class="nav-number">6.1.</span> <span class="nav-text">题目详情</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分析-5"><span class="nav-number">6.2.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-Instanceof-keyword"><span class="nav-number">7.</span> <span class="nav-text">Java Instanceof keyword</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目详情-6"><span class="nav-number">7.1.</span> <span class="nav-text">题目详情</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分析-6"><span class="nav-number">7.2.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-Iterator"><span class="nav-number">8.</span> <span class="nav-text">Java Iterator</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目详情-7"><span class="nav-number">8.1.</span> <span class="nav-text">题目详情</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分析-7"><span class="nav-number">8.2.</span> <span class="nav-text">分析</span></a></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#Java数据结构"><span class="nav-number"></span> <span class="nav-text">Java数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Maximum-Element"><span class="nav-number">1.</span> <span class="nav-text">Maximum Element</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目详情-8"><span class="nav-number">1.1.</span> <span class="nav-text">题目详情</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分析-8"><span class="nav-number">1.2.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Balanced-Brackets（括号平衡）"><span class="nav-number">2.</span> <span class="nav-text">Balanced Brackets（括号平衡）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目详情-9"><span class="nav-number">2.1.</span> <span class="nav-text">题目详情</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分析-9"><span class="nav-number">2.2.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Equal-Stacks"><span class="nav-number">3.</span> <span class="nav-text">Equal Stacks</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目详情-10"><span class="nav-number">3.1.</span> <span class="nav-text">题目详情</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分析-10"><span class="nav-number">4.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Game-of-Two-Stacks"><span class="nav-number">5.</span> <span class="nav-text">Game of Two Stacks</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目详情-11"><span class="nav-number">5.1.</span> <span class="nav-text">题目详情</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分析-11"><span class="nav-number">5.2.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Largest-Rectangle（最大的矩形）"><span class="nav-number">6.</span> <span class="nav-text">Largest Rectangle（最大的矩形）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目详情-12"><span class="nav-number">6.1.</span> <span class="nav-text">题目详情</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分析-12"><span class="nav-number">6.2.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Simple-Text-Editor"><span class="nav-number">7.</span> <span class="nav-text">Simple Text Editor</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题目详情-13"><span class="nav-number">8.</span> <span class="nav-text">题目详情</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分析-13"><span class="nav-number">9.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Queue-using-Two-Stacks"><span class="nav-number">10.</span> <span class="nav-text">Queue using Two Stacks</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目详情-14"><span class="nav-number">10.1.</span> <span class="nav-text">题目详情</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分析-14"><span class="nav-number">10.2.</span> <span class="nav-text">分析</span></a></li></ol></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lin Ya</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <!--<script src="//unpkg.com/valine/dist/Valine.min.js"></script>-->
+  <script src="//github.com/DesertsP/Valine/releases/download/v1.2.0/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'LmWFRWAtV7whFqjhn4RFmr31-gzGzoHsz',
+        appKey: 'VNzayurh3hNj8ewPps8cLChF',
+        placeholder: '快来成为第一个 ヾﾉ≧∀≦)o',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
